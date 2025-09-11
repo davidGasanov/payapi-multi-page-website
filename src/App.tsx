@@ -1,13 +1,10 @@
-import { RouterProvider } from "react-router-dom";
-import { router } from "./routes";
+import MainLayout from "./layout";
 
 function App() {
   return (
-    <>
-      <main>
-        <RouterProvider router={router} />
-      </main>
-    </>
+    <div className="bg-[#EDF3F8]">
+      <MainLayout />
+    </div>
   );
 }
 
