@@ -1,1 +1,46 @@
+/* DM Serif display */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+/* Public sans */
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-dark-pink: #ba4270;
+  --color-water-white: #fbfcfe;
+  --color-san-juan-blue: #36536b;
+  --color-mirage-blue: #1b262f;
+  --color-charm-pink: #da6d97;
+  --color-light-san-juan-blue: #6c8294;
+
+  /* Fonts */
+  --font-dm-serif-display: "DM Serif Display", serif;
+  --font-public-sans: "Public Sans", sans-serif;
+}
+
+/* Custom classes */
+
+/* Headings */
+
+.h1-large,
+.h1-small,
+.h2,
+.h3-big,
+.h3-small,
+.h4 {
+  @apply font-dm-serif-display text-san-juan-blue;
+}
+
+.h1-large {
+  @apply text-7xl font-normal leading-[72px];
+}
+
+.h1-small {
+  @apply text-[56px] font-normal leading-[56px];
+}
+
+.body {
+  @apply font-public-sans text-[15px] leading-[28px];
+}
