@@ -1,5 +1,14 @@
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes";
+
 function App() {
-  return <div className="bg-amber-400 text-5xl">New app</div>;
+  return (
+    <>
+      <main>
+        <RouterProvider router={router} />
+      </main>
+    </>
+  );
 }
 
 export default App;
