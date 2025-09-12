@@ -1,10 +1,11 @@
+import { twMerge } from "tailwind-merge";
 import { tv } from "tailwind-variants";
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: "primary" | "secondary-light" | "secondary-dark";
 };
 
-const Button = ({ variant, ...props }: ButtonProps) => {
+const Button = ({ variant, className, ...props }: ButtonProps) => {
   const button = tv({
     base: "pt-4 pr-[24px] pb-[14px] pl-[27px] transition-all duration-200 ease-in-out rounded-[24px] font-bold cursor-pointer disabled:cursor-default disabled:hover-none text-[15px] font-public-sans leading-snug disabled:opacity-50",
     variants: {
@@ -22,7 +23,7 @@ const Button = ({ variant, ...props }: ButtonProps) => {
     },
   });
 
-  return <button className={button({ variant })} {...props} />;
+  return <button className={twMerge(button({ variant }), className)} {...props} />;
 };
 
 export default Button;

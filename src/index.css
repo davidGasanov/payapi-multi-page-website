@@ -41,6 +41,22 @@
   @apply text-[56px] font-normal leading-[56px];
 }
 
+.h2 {
+  @apply text-[48px] leading-[56px];
+}
+
+.h3-big {
+  @apply text-[32px] leading-[40px];
+}
+
+.h3-small {
+  @apply text-[18px] leading-[25px];
+}
+
+.h4 {
+  @apply text-[24px] leading-[32px];
+}
+
 .body {
   @apply font-public-sans text-[15px] leading-[28px];
 }
