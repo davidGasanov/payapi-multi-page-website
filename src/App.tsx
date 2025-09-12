@@ -1,11 +1,7 @@
 import MainLayout from "./layout";
 
 function App() {
-  return (
-    <div className="bg-[#EDF3F8]">
-      <MainLayout />
-    </div>
-  );
+  return <MainLayout />;
 }
 
 export default App;

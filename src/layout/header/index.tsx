@@ -1,8 +1,12 @@
+import Container from "../container";
+
 const Header = () => {
   return (
-    <header>
-      <nav>Header placeholder</nav>
-    </header>
+    <Container className="sticky pt-10">
+      <header>
+        <nav>Header placeholder</nav>
+      </header>
+    </Container>
   );
 };
 

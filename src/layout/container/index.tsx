@@ -1,14 +1,21 @@
 // Primary container for page section widths
 
 import type React from "react";
+import { twMerge } from "tailwind-merge";
 
-interface ContainerProps {
-  children: React.ReactNode;
-}
+type ContainerProps = React.HTMLAttributes<HTMLDivElement> & {
+  children?: React.ReactNode;
+};
 
-const Container = ({ children }: ContainerProps) => {
+const Container = ({ children, className, ...props }: ContainerProps) => {
   return (
-    <div className="max-w-[1100px] py-[24px] md:py-[40px] lg:my-auto">
+    <div
+      className={twMerge(
+        "max-w-[1100px] px-[24px] md:px-[40px] lg:mx-auto",
+        className
+      )}
+      {...props}
+    >
       {children}
     </div>
   );

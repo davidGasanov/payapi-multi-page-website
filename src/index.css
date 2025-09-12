@@ -33,12 +33,44 @@
   @apply font-dm-serif-display text-san-juan-blue;
 }
 
-.h1-large {
-  @apply text-7xl font-normal leading-[72px];
+@utility h1-large {
+  font-size: 72px;
+  font-style: normal;
+  line-height: 72px;
 }
 
-.h1-small {
+/* .h1-small {
   @apply text-[56px] font-normal leading-[56px];
+} */
+
+@utility h1-small {
+  font-size: 56px;
+  font-style: normal;
+  line-height: 56px;
+}
+
+@utility h2 {
+  font-size: 48px;
+  font-style: normal;
+  line-height: 56px;
+}
+
+.h3-small {
+  @apply text-[18px] leading-[25px];
+}
+
+/* .h3-big {
+    @apply text-[32px] leading-[40px];
+  } */
+
+@utility h3-big {
+  font-size: 32px;
+  font-style: normal;
+  line-height: 40px;
+}
+
+.h4 {
+  @apply text-[24px] leading-[32px];
 }
 
 .body {
