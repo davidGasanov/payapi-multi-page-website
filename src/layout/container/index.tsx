@@ -11,7 +11,7 @@ const Container = ({ children, className, ...props }: ContainerProps) => {
   return (
     <div
       className={twMerge(
-        "max-w-[1100px] px-[24px] md:px-[40px] lg:my-auto",
+        "max-w-[1100px] px-[24px] md:px-[40px] lg:mx-auto",
         className
       )}
       {...props}
