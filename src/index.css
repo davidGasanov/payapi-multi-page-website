@@ -30,7 +30,7 @@
 .h3-big,
 .h3-small,
 .h4 {
-  @apply font-dm-serif-display text-san-juan-blue;
+  @apply font-dm-serif-display;
 }
 
 @utility h1-large {
@@ -38,10 +38,6 @@
   font-style: normal;
   line-height: 72px;
 }
-
-/* .h1-small {
-  @apply text-[56px] font-normal leading-[56px];
-} */
 
 @utility h1-small {
   font-size: 56px;
@@ -58,10 +54,6 @@
 .h3-small {
   @apply text-[18px] leading-[25px];
 }
-
-/* .h3-big {
-    @apply text-[32px] leading-[40px];
-  } */
 
 @utility h3-big {
   font-size: 32px;
