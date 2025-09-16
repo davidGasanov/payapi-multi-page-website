@@ -21,7 +21,7 @@ const Section2 = () => {
       />
       {/* /Bg image */}
 
-      <Container className="py-20 md:py-[88px] flex flex-col relative z-10 md:flex-row-reverse md:items-center md:justify-between">
+      <Container className="py-20 md:py-[88px] flex flex-col relative z-10 md:items-center md:justify-between lg:flex-row-reverse lg:gap-6">
         {/* Company list */}
         <div className="flex flex-wrap justify-between gap-y-10 gap-x-12 w-full max-w-[300px] mx-auto md:grid md:grid-cols-3 md:max-w-[536px] md:place-items-center shrink-0 lg:mx-0 lg:justify-items-start lg:items-center">
           {companiesImageUrlList.map((imageUrl) => (
