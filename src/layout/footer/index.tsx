@@ -21,7 +21,7 @@ const socials = [
 
 const Footer = () => {
   return (
-    <footer className="bg-mirage-blue py-10 mt-10 md:py-[31px] md:mt-[100px] lg:mt-[150px] relative z-10">
+    <footer className="bg-mirage-blue py-10 mt-10 md:py-[31px] md:mt-[100px] lg:mt-[96px] relative z-10">
       <Container className="flex flex-col items-center md:flex-row md:items-center">
         <img src="/assets/shared/desktop/logo-white.svg" />
         <nav

@@ -4,6 +4,7 @@ import Container from "../container";
 import MobileNavigation from "./mobile-navigation";
 import NavigationLinks from "./navigation-links";
 import Button from "../../components/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -32,7 +33,9 @@ const Header = () => {
     <div className={headerVariants({ scrolled })}>
       <Container>
         <header className="flex items-center justify-between lg:justify-start">
-          <img src="assets/shared/desktop/logo.svg" alt="Website logo" />
+          <Link to="/">
+            <img src="assets/shared/desktop/logo.svg" alt="Website logo" />
+          </Link>
 
           <NavigationLinks className="hidden md:flex" />
           <Button variant="primary" className="hidden md:block lg:ml-auto">
