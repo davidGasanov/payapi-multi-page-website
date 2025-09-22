@@ -14,7 +14,7 @@ const MainLayout = () => {
       </div>
       {/* /Background image */}
       <Header />
-      <main className="relative z-10 overflow-x-hidden">
+      <main className="relative z-10 overflow-x-hidden overflow-y-clip">
         <Outlet />
       </main>
       <Footer />
