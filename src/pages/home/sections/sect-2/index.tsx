@@ -17,7 +17,7 @@ const Section2 = () => {
       {/* Bg image */}
       <img
         src="/assets/shared/desktop/bg-pattern-circle.svg"
-        className="w-[780px] h-[780px] z-0 object-contain absolute left-1/2 -translate-x-1/2 -top-[502px] md:-top-[548px]"
+        className="w-[780px] h-[780px] z-0 object-contain absolute left-1/2 -translate-x-1/2 -top-[502px] md:-top-[548px] lg:-top-[359px] lg:-left-[235px] lg:translate-x-0"
       />
       {/* /Bg image */}
 
