@@ -1,22 +1,28 @@
 import { Link } from "react-router-dom";
 import Container from "../container";
+import { IoLogoFacebook } from "react-icons/io";
+import { FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { AiFillFacebook } from "react-icons/ai";
 
 const socials = [
   {
     href: "/",
-    src: "/assets/shared/desktop/facebook.svg",
-    alt: "facebook",
+    Icon: AiFillFacebook,
   },
   {
     href: "/",
-    src: "/assets/shared/desktop/twitter.svg",
-    alt: "twitter",
+    Icon: FaTwitter,
   },
   {
     href: "/",
-    src: "/assets/shared/desktop/linkedin.svg",
-    alt: "linkedin",
+    Icon: FaLinkedin,
   },
+];
+
+const navLinks = [
+  { to: "/pricing", label: "Pricing" },
+  { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
 ];
 
 const Footer = () => {
@@ -28,24 +34,25 @@ const Footer = () => {
         <img src="/assets/shared/desktop/logo-white.svg" />
         <nav
           className="mt-10 flex flex-col gap-[31px] list-none [&>li]:{
-          text-[15px] font-bold text-water-white/70 
+          text-[15px] font-semibold text-water-white/70 
           } items-center md:ml-[64px] md:flex-row md:mt-0"
         >
-          <li>
-            <Link to="/about">Pricing</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/about">Contact</Link>
-          </li>
+          {navLinks.map((link) => (
+            <li key={link.to}>
+              <Link className="hover:text-water-white transition-all duration-150" to={link.to}>
+                {link.label}
+              </Link>
+            </li>
+          ))}
         </nav>
         <ul className="mt-10 flex gap-6 list-none items-center md:mt-0 md:ml-auto">
-          {socials.map(({ href, src, alt }) => (
-            <li key={alt}>
+          {socials.map(({ href, Icon }) => (
+            <li>
               <a href={href}>
-                <img src={src} alt={alt} />
+                <Icon
+                  size={26}
+                  className="text-water-white hover:text-charm-pink transition-all duration-150"
+                />
               </a>
             </li>
           ))}
