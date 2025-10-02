@@ -11,21 +11,30 @@ type InputProps = React.InputHTMLAttributes<HTMLInputElement> &
     multiline?: boolean;
   };
 
-const Input: React.FC<InputProps> = ({ error, multiline, ...props }) => {
+const Input: React.FC<InputProps> = ({
+  error,
+  multiline,
+  className,
+  ...props
+}) => {
   ////////////////////////// [Setup] /////////////////////////
   const Tag = multiline ? "textarea" : "input";
 
-  ////////////////////////// [Setup] /////////////////////////
+  ////////////////////////// [Style] /////////////////////////
   const InputVars = tv({
     base: "peer outline-none font-public-sans text-san-juan-blue placeholder-san-juan-blue opacity-50 transition-all duration-200 ease-in-out [&:not(:placeholder-shown)]:opacity-100 resize-none w-full",
     variants: {
       isFocused: {
-        false: "",
+        false: "opacity-50",
         true: "opacity-100",
       },
       error: {
         false: "",
         true: "text-error placeholder-error",
+      },
+      isEmpty: {
+        false: "opacity-100",
+        true: "opacity-50",
       },
     },
     compoundVariants: [
@@ -33,6 +42,12 @@ const Input: React.FC<InputProps> = ({ error, multiline, ...props }) => {
         isFocused: true,
         error: true,
         class: "text-error placeholder-error",
+      },
+      {
+        isFocused: false,
+        error: false,
+        isEmpty: true,
+        class: "opacity-50",
       },
     ],
   });
@@ -60,6 +75,12 @@ const Input: React.FC<InputProps> = ({ error, multiline, ...props }) => {
         class: "border-b-error",
       },
       {
+        error: false,
+        isFocused: false,
+        isEmpty: true,
+        class: "border-b-san-juan-blue/50",
+      },
+      {
         error: true,
         isFocused: false,
         isEmpty: false,
@@ -78,36 +99,39 @@ const Input: React.FC<InputProps> = ({ error, multiline, ...props }) => {
   const [isFocused, setIsFocused] = useState(false);
   const [isEmpty, setIsEmpty] = useState(true);
 
+  console.log("is focused: ", isFocused, "is Empty: ", isEmpty);
+
   ////////////////////////// [Functional logic] /////////////////////////
   const handleFocus = (
     e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setIsFocused(true);
-    props.onFocus?.(e as any); // optional, see note below
+    props.onFocus?.(e as any);
   };
 
   const handleBlur = (
     e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
+    console.log("blurring");
     setIsFocused(false);
     props.onBlur?.(e as any);
   };
 
   return (
-    <div className="flex flex-col max-w-[284px]">
+    <div className={twMerge("flex flex-col", className)}>
       <div
         className={twMerge(
           InputContainerVars({ isFocused, error: Boolean(error), isEmpty })
         )}
       >
         <Tag
+          {...props}
           rows={multiline ? 3 : 1}
           onFocus={handleFocus}
           onBlur={handleBlur}
           onInput={(e) => setIsEmpty(e.currentTarget.value === "")}
           type="text"
-          {...props}
-          className={InputVars({ isFocused, error: Boolean(error) })}
+          className={InputVars({ isFocused, error: Boolean(error), isEmpty })}
         />
       </div>
       <p

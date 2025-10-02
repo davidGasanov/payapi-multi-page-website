@@ -4,6 +4,7 @@ import TestPage from "../pages/test-page";
 import HomePage from "../pages/home";
 import PricingPage from "../pages/pricing";
 import AboutPage from "../pages/about";
+import ContactPage from "../pages/contact";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: "/pricing",
         Component: PricingPage,
+      },
+      {
+        path: "/contact",
+        Component: ContactPage,
       },
     ],
   },
