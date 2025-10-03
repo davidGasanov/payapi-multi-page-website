@@ -45,6 +45,11 @@ const Input: React.FC<InputProps> = ({
       },
       {
         isFocused: false,
+        error: true,
+        class: "text-error/50 placeholder-error",
+      },
+      {
+        isFocused: false,
         error: false,
         isEmpty: true,
         class: "opacity-50",
@@ -84,7 +89,13 @@ const Input: React.FC<InputProps> = ({
         error: true,
         isFocused: false,
         isEmpty: false,
-        class: "border-b-error",
+        class: "border-b-error/50",
+      },
+      {
+        error: true,
+        isFocused: false,
+        isEmpty: true,
+        class: "border-b-error/50",
       },
       {
         error: false,
@@ -98,8 +109,6 @@ const Input: React.FC<InputProps> = ({
   ////////////////////////// [State] /////////////////////////
   const [isFocused, setIsFocused] = useState(false);
   const [isEmpty, setIsEmpty] = useState(true);
-
-  console.log("is focused: ", isFocused, "is Empty: ", isEmpty);
 
   ////////////////////////// [Functional logic] /////////////////////////
   const handleFocus = (

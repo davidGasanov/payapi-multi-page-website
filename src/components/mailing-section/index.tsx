@@ -7,7 +7,7 @@ const MailingSection: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
 }) => {
   return (
     <section
-      className={twMerge("mt-[80px] md:mt-[100px] lg:mt-[150px]", className)}
+      className={twMerge("mt-[80px] md:mt-[100px] lg:mt-[150px] w-full", className)}
     >
       <Container>
         <Mailing withTitle />
