@@ -18,7 +18,7 @@ const Button = ({ variant, className, ...props }: ButtonProps) => {
           "bg-mirage-blue text-water-white border border-water-white hover:bg-water-white hover:text-mirage-blue disabled:hover:bg-mirage-blue disabled:hover:text-water-white",
         //   Secondary (Dark)
         "secondary-dark":
-          "bg-water-white text-san-juan-blue border border-san-juan-blue hover:bg-san-juan-blue hover:text-water-white disabled:hover:bg-san-juan-blue disabled:hover:text-water-white",
+          "bg-none text-san-juan-blue border border-san-juan-blue hover:bg-san-juan-blue hover:text-water-white disabled:hover:bg-san-juan-blue disabled:hover:text-water-white",
       },
     },
   });
