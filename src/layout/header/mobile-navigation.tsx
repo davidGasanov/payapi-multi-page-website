@@ -1,11 +1,16 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { tv } from "tailwind-variants";
 import Button from "../../components/button";
 import NavigationLinks from "./navigation-links";
+import { useLocation } from "react-router-dom";
 
 const MobileNavigation = () => {
   const [open, setOpen] = useState(false);
+  const route = useLocation();
+
+  useEffect(() => {
+    handleClose();
+  }, [route.pathname]);
 
   const handleOpen = () => {
     setOpen(true);
