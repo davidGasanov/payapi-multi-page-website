@@ -6,7 +6,7 @@ const HeroSection = () => {
     <section className="mt-8 relative z-10">
       <Container className="flex flex-col items-center gap-[24px] lg:flex-row-reverse lg:gap-[206px] lg:justify-between">
         <img
-          src="/public/assets/home/desktop/illustration-phone-mockup.svg"
+          src="/assets/home/desktop/illustration-phone-mockup.svg"
           alt="Mobile phone illustration"
           className="w-[128px] h-[240px] drop-shadow-[25px 25px 80px #36536B] lg:w-[263px] lg:h-[500px] lg:mr-[95px]"
         />
