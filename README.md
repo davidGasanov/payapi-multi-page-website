@@ -13,7 +13,6 @@ This is a solution to the [PayAPI multi-page website challenge on Frontend Mento
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-
 - [Author](#author)
 
 ## Overview
@@ -34,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/payapi-multi-page-website-91NDfWDkQy]
 - Live Site URL: [https://payapi-multi-page-website-eight.vercel.app/]
 
 ## My process
@@ -58,4 +57,4 @@ I am still not too familiar with the aforementioned technologies, and would like
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/davidGasanov)
+- Frontend Mentor - [@davidGasasnov](https://www.frontendmentor.io/profile/davidGasanov)
