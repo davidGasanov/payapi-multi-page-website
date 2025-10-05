@@ -18,16 +18,20 @@ const ContactForm = () => {
     register,
     handleSubmit,
     watch,
+    reset,
     setValue,
-    formState: { errors },
+    formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm<FormFields>();
 
   const values = watch();
   console.log("values: ", values);
   console.log("errors: ", errors);
 
-  const onSubmit: SubmitHandler<FormFields> = async (values) => {
-    console.log(values);
+  const onSubmit: SubmitHandler<FormFields> = async () => {
+    await new Promise((resolve) => {
+      return setTimeout(resolve, 1000);
+    });
+    reset();
   };
 
   return (
@@ -77,7 +81,19 @@ const ContactForm = () => {
           Stay up-to-date with company announcements and updates to our API
         </p>
       </div>
-      <Button variant="secondary-dark" className="max-w-[152px]">Submit</Button>
+      {isSubmitSuccessful && (
+        <p className="body text-san-juan-blue font-bold">
+          Success! our representative will get in touch with you shortly. Thank
+          you for taking an interest in PayAPI!
+        </p>
+      )}
+      <Button
+        variant="secondary-dark"
+        className="max-w-[152px]"
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? "Submitting..." : "Submit"}
+      </Button>
     </form>
   );
 };
